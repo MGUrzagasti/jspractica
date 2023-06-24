@@ -1,39 +1,28 @@
 
-let alert = document.getElementById("alert1");
-let boton = document.getElementById("resultado1")
-boton.addEventListener('click',resultado1);
+var flujomes =[ {mes: "enero" , ingreso: 1500, egreso: 1500},
+{mes: "febrero" , ingreso: 2500, egreso: 2500},
+{mes: "marzo" , ingreso: 84683, egreso: 1155},
+{mes: "abril" , ingreso: 135653, egreso: 1535},
+{mes: "mayo" , ingreso: 1535, egreso: 5434},
+{mes: "junio" , ingreso: 4343343, egreso: 5334434},
+{mes: "julio" , ingreso: 435453, egreso: 4534},
+{mes: "agosto" , ingreso: 78351, egreso: 7916},
+{mes: "septiembre" , ingreso: 1878, egreso: 95634},
+{mes: "octubre" , ingreso: 48483, egreso: 1500},
+{mes: "noviembre" , ingreso: 5678765, egreso: 1500},
+{mes: "diciembre" , ingreso: 1500, egreso: 1500}] 
 
-function resultado1() {
-    let ingreso = document.getElementById("ingreso1").value ;
-    let egreso = document.getElementById("egreso1").value ;
-    if (ingreso > egreso) {
-
-        let datoIngreso = parseFloat(ingreso - egreso);
-        alert1.innerHTML= "Obtuvo ganancias en Enero"+ (datoIngreso);
-    } else{
-        let datoIngreso = parseFloat(ingreso - egreso);
-        alert1.innerHTML= "Obtuvo perdidas en Enero"+ (datoIngreso);
-        
+for (let index = 0; index < flujomes.length; index++) {
+    const element = flujomes[index]["ingreso"] ;
+    const element1= flujomes[index]["egreso"] ;
+    const element2= flujomes[index]["mes"];
+   if (element > element1) {
+    console.log("mes con ganancias" +" "+ element2);
+   } else {
+    console.log("mes con perdidas" +" "+ element2);
+   }
+    if (element==element1) {
+        console.log("ingresos y egresos iguales" +" " +element2);
     }
-
-
 }
-let alert2 = document.getElementById("alert2");
-let boton2 = document.getElementById("resultado2")
-boton.addEventListener('click',resultado2);
 
-function resultado2() {
-    let ingreso = document.getElementById("ingreso2").value ;
-    let egreso = document.getElementById("egreso2").value ;
-    if (ingreso > egreso) {
-
-        let datoIngreso = parseFloat(ingreso - egreso);
-        alert2.innerHTML= "Obtuvo ganancias en Enero"+ (datoIngreso);
-    } else{
-        let datoIngreso = parseFloat(ingreso - egreso);
-        alert2.innerHTML= "Obtuvo perdidas en Enero"+ (datoIngreso);
-        
-    }
-
-
-}
